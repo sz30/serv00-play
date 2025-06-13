@@ -47,7 +47,7 @@ install() {
 
   cd ${installpath}
   echo "正在安装..."
-  if ! git clone https://github.com/frankiejun/serv00-play.git; then
+  if ! git clone https://github.com/sz30/serv00-play.git; then
     echo -e "${RED}安装失败!${RESET}"
     exit 1
   fi
@@ -3850,7 +3850,7 @@ vip_statement() {
 }
 
 getLatestVer() {
-  ver=$(git ls-remote --tags https://github.com/frankiejun/serv00-play.git | awk -F/ '{print $3}' | sort -V | tail -n 1)
+  ver=$(git ls-remote --tags https://github.com/sz30/serv00-play.git | awk -F/ '{print $3}' | sort -V | tail -n 1)
   echo $ver
 }
 getCurrentVer() {
