@@ -325,12 +325,12 @@ make_outbound_wireguard() {
         "server_port": 4500,
         "local_address": [
                 "172.16.0.2/32",
-                "2606:4700:110:83c7:b31f:5858:b3a8:c6b1/128"
+                "06:4700:110:83c7:b31f:5858:b3a8:c6b1/128"
         ],
         "private_key": "mPZo+V9qlrMGCZ7+E6z2NI6NOV34PD++TpAR09PtCWI=",
         "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
         "reserved": [
-                26,
+                ,
                 21,
                 228
         ]
@@ -3876,9 +3876,7 @@ showMenu() {
   echo "<------------------------------------------------------------------>"
   echo "请选择一个选项:"
 
-  options=("安装/更新serv00-play项目" "sun-panel" "webssh" "阅后即焚" "linkalive" "设置保活的项目" "配置sing-box"
-    "运行sing-box" "停止sing-box" "显示sing-box节点信息" "快照恢复" "系统初始化" "前置工作及设置中国时区" "哪吒探针管理" "哪吒面板管理" "设置彩色开机字样" "显示本机IP"
-    "mtproto代理" "alist管理" "端口管理" "域名证书管理" "一键root" "自动检测主机IP状态" "一键更换hy2的IP" "KeepAlive" "Domains-Support" "卸载")
+  options=("安装/更新serv00-play项目" "sun-panel" "webssh" "阅后即焚" "linkalive" "设置保活的项目" "快照恢复" "系统初始化" "前置工作及设置中国时区" "设置彩色开机字样" "显示本机IP" "端口管理" "域名证书管理" "一键root" "自动检测主机IP状态" "KeepAlive" "Domains-Support" "卸载")
 
   select opt in "${options[@]}"; do
     case $REPLY in
@@ -3901,66 +3899,39 @@ showMenu() {
       setConfig
       ;;
     7)
-      configSingBox
-      ;;
-    8)
-      startSingBox
-      ;;
-    9)
-      stopSingBox
-      ;;
-    10)
-      showSingBoxInfo
-      ;;
-    11)
       ImageRecovery
       ;;
-    12)
+    8)
       InitServer
       ;;
-    13)
+    9)
       setCnTimeZone
       ;;
-    14)
-      manageNeZhaAgent
-      ;;
-    15)
-      manageNeZhaBoard
-      ;;
-    16)
+    10)
       setColorWord
       ;;
-    17)
+    11)
       showIP
       ;;
-    18)
-      mtprotoServ
-      ;;
-    19)
-      alistServ
-      ;;
-    20)
+    12)
       portServ
       ;;
-    21)
+    13)
       domainSSLServ
       ;;
     22)
       rootServ
       ;;
-    23)
+    14)
       showIPStatus
       ;;
-    24)
-      changeHy2IP
-      ;;
-    25)
+    15)
       keepAliveServ
       ;;
-    26)
+    16)
       DSServ
       ;;
-    27)
+    17)
       uninstall
       ;;
     0)
