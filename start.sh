@@ -39,8 +39,6 @@ install() {
       chmod +x ./tgsend.sh
       chmod +x ./wxsend.sh
       chmod +x ${installpath}/serv00-play/singbox/start.sh
-      chmod +x ${installpath}/serv00-play/singbox/killsing-box.sh
-      chmod +x ${installpath}/serv00-play/singbox/autoUpdateHyIP.sh
       chmod +x ${installpath}/serv00-play/ssl/cronSSL.sh
       red "请重新启动脚本!"
       exit 0
@@ -68,8 +66,6 @@ install() {
   chmod +x ./tgsend.sh
   chmod +x ./wxsend.sh
   chmod +x ${installpath}/serv00-play/singbox/start.sh
-  chmod +x ${installpath}/serv00-play/singbox/killsing-box.sh
-  chmod +x ${installpath}/serv00-play/singbox/autoUpdateHyIP.sh
   chmod +x ${installpath}/serv00-play/ssl/cronSSL.sh
   if [ -z "$input" ]; then
     read -p "$(yellow 设置完毕,需要重新登录才能生效，是否重新登录？[y/n] [y]:)" input
@@ -3870,8 +3866,6 @@ showMenu() {
   art_wrod=$(figlet "serv00-play")
   echo "<------------------------------------------------------------------>"
   echo -e "${CYAN}${art_wrod}${RESET}"
-  echo -e "${GREEN} 饭奇骏频道:https://www.youtube.com/@frankiejun8965 ${RESET}"
-  echo -e "${GREEN} TG交流群:https://t.me/fanyousuiqun ${RESET}"
   echo -e "${GREEN} 当前版本号:$(getCurrentVer) 最新版本号:$(getLatestVer) ${RESET}"
   echo "<------------------------------------------------------------------>"
   echo "请选择一个选项:"
