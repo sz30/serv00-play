@@ -3913,19 +3913,19 @@ showMenu() {
     13)
       domainSSLServ
       ;;
-    22)
+    14)
       rootServ
       ;;
-    14)
+    15)
       showIPStatus
       ;;
-    15)
+    16)
       keepAliveServ
       ;;
-    16)
+    17)
       DSServ
       ;;
-    17)
+    18)
       uninstall
       ;;
     0)
